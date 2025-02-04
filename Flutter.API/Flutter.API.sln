@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35707.178 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flutter.API", "Flutter.API\Flutter.API.csproj", "{4E5B602B-42D7-465C-976E-41EFCAE28134}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{9FCB2456-5437-4679-920E-B743718EF31A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{B1176D5E-74BE-480B-98AE-1F10354DFA80}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "Application\Application.csproj", "{C2A8096E-3977-46C3-A0AF-F58D47BD2C30}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4E5B602B-42D7-465C-976E-41EFCAE28134}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E5B602B-42D7-465C-976E-41EFCAE28134}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E5B602B-42D7-465C-976E-41EFCAE28134}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E5B602B-42D7-465C-976E-41EFCAE28134}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9FCB2456-5437-4679-920E-B743718EF31A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FCB2456-5437-4679-920E-B743718EF31A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FCB2456-5437-4679-920E-B743718EF31A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FCB2456-5437-4679-920E-B743718EF31A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1176D5E-74BE-480B-98AE-1F10354DFA80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1176D5E-74BE-480B-98AE-1F10354DFA80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1176D5E-74BE-480B-98AE-1F10354DFA80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1176D5E-74BE-480B-98AE-1F10354DFA80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2A8096E-3977-46C3-A0AF-F58D47BD2C30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2A8096E-3977-46C3-A0AF-F58D47BD2C30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2A8096E-3977-46C3-A0AF-F58D47BD2C30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2A8096E-3977-46C3-A0AF-F58D47BD2C30}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
