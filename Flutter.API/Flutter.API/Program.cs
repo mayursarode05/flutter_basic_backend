@@ -16,6 +16,19 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 // Register AutoMapper
 builder.Services.AddAutoMapper(typeof(MappingProfile));
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+
+// **Enable CORS**
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowFlutterApp",
+        policy =>
+        {
+            policy.WithOrigins("http://localhost:3000", "https://10.0.2.2:7162/api") // **Change this to your Flutter app URL**
+                  .AllowAnyHeader()
+                  .AllowAnyMethod();
+        });
+});
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -29,7 +42,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
+// **Use CORS Middleware**
+app.UseCors("AllowFlutterApp");
 app.UseHttpsRedirection();
 
 app.UseAuthorization();

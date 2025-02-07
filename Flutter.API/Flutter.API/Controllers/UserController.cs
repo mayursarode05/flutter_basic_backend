@@ -27,7 +27,7 @@ namespace API.Controllers
             var user = _mapper.Map<User>(userDto);
             await unitOfWork.userRepository.AddAsync(user);
             await unitOfWork.CommitAsync();
-            return Ok("User Created successful..");
+            return Ok(new { message = "User Created successful..", success = true });
         }
     }
 }
