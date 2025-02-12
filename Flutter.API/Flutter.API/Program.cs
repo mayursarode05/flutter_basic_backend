@@ -23,7 +23,7 @@ builder.Services.AddCors(options =>
     options.AddPolicy("AllowFlutterApp",
         policy =>
         {
-            policy.WithOrigins("http://localhost:3000", "https://10.0.2.2:7162/api") // **Change this to your Flutter app URL**
+            policy.WithOrigins("http://localhost:3000", "https://localhost:7162", "https://10.0.2.2:7162/api") // **Change this to your Flutter app URL**
                   .AllowAnyHeader()
                   .AllowAnyMethod();
         });

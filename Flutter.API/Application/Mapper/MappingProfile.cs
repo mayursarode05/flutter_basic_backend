@@ -13,7 +13,10 @@ namespace Application.Mapper
     {
         public MappingProfile()
         {
-            CreateMap<User, UserDto>().ReverseMap();  
+            CreateMap<User, UserDto>()
+                .ReverseMap()
+            .ForAllMembers(opt => opt.Condition((src, dest, srcMember) => srcMember != null));    
+              
         }
     }
 }

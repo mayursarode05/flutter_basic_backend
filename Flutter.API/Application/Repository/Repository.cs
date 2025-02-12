@@ -5,6 +5,9 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using Application.Repository.IRepository;
+using AutoMapper;
+using Domain.DTOs;
+using Domain.Models;
 using Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Internal;
@@ -46,10 +49,11 @@ namespace Application.Repository
             return await _dbSet.FindAsync(id);
         }
 
-        public async Task UpdateAsync(T entity)
+        public Task UpdateAsync(T entity)
         {
             _dbSet.Attach(entity);
             _db.Entry(entity).State = EntityState.Modified;
+            return Task.CompletedTask;
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using Application.Repository.IRepository;
+using AutoMapper;
 using Domain.Models;
 using Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
@@ -19,7 +20,7 @@ namespace Application.Repository
         }
         public async Task<User> GetByEmailAsync(string email)
         {
-            return await _context.Users.FirstOrDefaultAsync(u => string.Compare(u.Email,email,true) == 0);
+            return await _context.Users.Where(x => x.Email == email).FirstOrDefaultAsync();
         }
     }
 }
